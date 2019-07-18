@@ -1,0 +1,68 @@
+#!/usr/bin/env python
+# Use this script at your own risk. I am not responsible for any damage caused by it.
+#
+import StringIO
+import datetime
+import getopt
+import os
+import string
+import sys
+import time
+from subprocess import PIPE, Popen
+from time import time
+import cx_Oracle
+import CosNaming
+import GCS
+from omniORB import CORBA
+import sqlite3
+import OSR, OSR__POA
+
+def printtable(p_table,p_header):
+    if len(p_table)>0:
+        col_width = [max(len(str(x)) for x in line) for line in zip(*p_table)]
+        i=0
+        output=''
+        if not nullcheck(p_header):
+            for word in p_header:
+                if col_width[i]<len(str(word)):
+                    col_width[i]=len(str(word))
+                output+="".join(str(word).ljust(col_width[i]+3))
+                i=i+1
+            print output
+            print "-"*len(output)
+
+        for row in p_table:
+            i=0
+            output=""
+            for word in row:
+                output+= "".join(str(word).ljust(col_width[i]+3))
+                i=i+1
+            print output
+    else:
+        print "No Data Found to print a table"
+
+def nullcheck(object,name=None):
+    if object==None:
+        if name != None:
+            print "Object " + name + " is null (None)"
+            return True
+    else:
+        return False
+
+query="select porh_id, porh_type, porh_received"
+query+=" FROM pick_order_hist"
+query+=" where rownum < 100"
+
+try:
+    db = cx_Oracle.connect(ocfg.value().user + '/' + ocfg.value().password + '@' + ocfg.value().sid)
+    cursor = db.cursor()
+    cursor.execute(query)
+    porh = cursor.fetchall()
+    printtable(porh, ["PORH_ID","PORH_TYPE","PORH_RECEIVED"])
+except cx_Oracle.DatabaseError as e:
+    print "db connection failed"
+    error, = e.args
+    print('Error.Code = ', error.code)
+    print('Error.message =', error.message)
+    print('Error.offset =', error.offset)
+    sys.exit(1)
