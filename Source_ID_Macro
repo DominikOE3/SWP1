@@ -1,18 +1,24 @@
-<Macro name="Opa_Status_String" Ctrl="no" Alt="yes" Shift="no" Key="118">
+<Macro name="Source" Ctrl="no" Alt="yes" Shift="no" Key="120">
             <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
             <Action type="3" message="1601" wParam="0" lParam="0" sParam="source cid:" />
-            <Action type="3" message="1625" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1625" wParam="0" lParam="2" sParam="" />
             <Action type="3" message="1702" wParam="0" lParam="784" sParam="" />
             <Action type="3" message="1701" wParam="0" lParam="1615" sParam="" />
             <Action type="2" message="0" wParam="43051" lParam="0" sParam="" />
-            <Action type="0" message="2025" wParam="0" lParam="0" sParam="" />
-            <Action type="0" message="2422" wParam="0" lParam="0" sParam="" />
-            <Action type="0" message="2325" wParam="0" lParam="0" sParam="" />
-            <Action type="0" message="2025" wParam="0" lParam="0" sParam="" />
-            <Action type="0" message="2422" wParam="0" lParam="0" sParam="" />
-            <Action type="0" message="2325" wParam="0" lParam="0" sParam="" />
             <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
-            <Action type="3" message="1601" wParam="0" lParam="0" sParam="^.*(?=Source cid:\s)" />
+            <Action type="3" message="1601" wParam="0" lParam="0" sParam="^.*(?=source cid:\s)" />
+            <Action type="3" message="1625" wParam="0" lParam="2" sParam="" />
+            <Action type="3" message="1602" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1702" wParam="0" lParam="768" sParam="" />
+            <Action type="3" message="1701" wParam="0" lParam="1609" sParam="" />
+            <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1601" wParam="0" lParam="0" sParam="source cid: " />
+            <Action type="3" message="1625" wParam="0" lParam="2" sParam="" />
+            <Action type="3" message="1602" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1702" wParam="0" lParam="768" sParam="" />
+            <Action type="3" message="1701" wParam="0" lParam="1609" sParam="" />
+            <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1601" wParam="0" lParam="0" sParam="|.*" />
             <Action type="3" message="1625" wParam="0" lParam="2" sParam="" />
             <Action type="3" message="1602" wParam="0" lParam="0" sParam="" />
             <Action type="3" message="1702" wParam="0" lParam="768" sParam="" />
@@ -24,15 +30,16 @@
             <Action type="3" message="1702" wParam="0" lParam="768" sParam="" />
             <Action type="3" message="1701" wParam="0" lParam="1609" sParam="" />
             <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
-            <Action type="3" message="1601" wParam="0" lParam="0" sParam="Source cid: " />
+            <Action type="3" message="1601" wParam="0" lParam="0" sParam="$" />
+            <Action type="3" message="1625" wParam="0" lParam="2" sParam="" />
+            <Action type="3" message="1602" wParam="0" lParam="0" sParam="," />
+            <Action type="3" message="1702" wParam="0" lParam="768" sParam="" />
+            <Action type="3" message="1701" wParam="0" lParam="1609" sParam="" />
+            <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1601" wParam="0" lParam="0" sParam="\R" />
             <Action type="3" message="1625" wParam="0" lParam="2" sParam="" />
             <Action type="3" message="1602" wParam="0" lParam="0" sParam="" />
             <Action type="3" message="1702" wParam="0" lParam="768" sParam="" />
             <Action type="3" message="1701" wParam="0" lParam="1609" sParam="" />
-        </Macro>
-        <Macro name="Comma" Ctrl="no" Alt="yes" Shift="no" Key="119">
             <Action type="0" message="2451" wParam="0" lParam="0" sParam="" />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam="," />
-            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
-            <Action type="0" message="2326" wParam="0" lParam="0" sParam="" />
         </Macro>
